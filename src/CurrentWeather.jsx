@@ -1,17 +1,20 @@
 import React from 'react';
 
-const CurrentWeather = ({ temperature, humidity, windSpeed, description, icon }) => {
+//Import CityInput
+
+const CurrentWeather = ({ city, temperature, humidity, windSpeed, description, icon }) => {
   return (
     <div className="card mb-4">
       <div className="card-body">
+      <h5 className="card-title mb-2">{city}</h5>
         <div className="row align-items-center">
           <div className="col-md-6">
-            <h5 className="card-title mb-2">{temperature}°C</h5>
+            <p className="card-text mb-2">{temperature}°C</p>
             <p className="card-text mb-2">
-              <i className="fas fa-tint me-2"></i>Humidity:{humidity}%
+              <i className="fas fa-tint me-2"></i>Humidity: {humidity}%
             </p>
             <p className="card-text mb-0">
-              <i className="fas fa-wind me-2"></i>Wind Speed:{windSpeed} km/h
+              <i className="fas fa-wind me-2"></i>Wind Speed: {windSpeed} km/h
             </p>
           </div>
           <div className="col-md-6 text-md-end">

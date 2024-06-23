@@ -38,3 +38,32 @@
   max-width: 400px;
   margin-bottom: 1.5rem;
 }
+
+.forecast-card {
+  background-color: #f8f9fa; 
+  border-radius: 8px; 
+  padding: 1rem;
+  text-align: center;
+}
+
+.forecast-card .card-title {
+  font-size: 0.875rem; 
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-card .weather-icon {
+  height: 50px; 
+  width: 50px;
+  margin-right: 0.5rem;
+}
+
+.forecast-card .temperature {
+  font-size: 1.25rem; 
+  font-weight: bold;
+}
+
+.forecast-card .weather-description {
+  font-size: 0.875rem; 
+  margin-top: 0.5rem;
+}
