@@ -1,3 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+.weather-app-container {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
 .weather-app-container {
   background-color: #f5f5f5;
   border-radius: 8px;
@@ -40,6 +56,9 @@
 }
 
 .forecast-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f8f9fa; 
   border-radius: 8px; 
   padding: 1rem;
@@ -53,8 +72,7 @@
 }
 
 .forecast-card .weather-icon {
-  height: 50px; 
-  width: 50px;
+  font-size: 2rem;
   margin-right: 0.5rem;
 }
 
@@ -66,4 +84,33 @@
 .forecast-card .weather-description {
   font-size: 0.875rem; 
   margin-top: 0.5rem;
+}
+
+@import '../../node_modules/weather-icons/css/weather-icons.css';
+
+.weather-icon {
+  font-family: 'weathericons';
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .weather-app-title {
+    font-size: 1.75rem;
+  }
+
+  .weather-icon {
+    font-size: 3rem;
+  }
+
+  .weather-temperature {
+    font-size: 2.5rem;
+  }
+
+  .forecast-card .weather-icon {
+    font-size: 1.75rem;
+  }
+
+  .forecast-card .temperature {
+    font-size: 1.1rem;
+  }
 }

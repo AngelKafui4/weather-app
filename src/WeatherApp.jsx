@@ -72,7 +72,8 @@ const WeatherApp = () => {
           city={cityRes}
           temperature={weather.main.temp} 
           windSpeed={weather.wind.speed}
-          humidity={weather.main.humidity} 
+          humidity={weather.main.humidity}
+          precipitation={weather.rain?.['3h'] || 0} 
           description={weather.weather[0].description} 
           icon={weather.weather[0].icon} 
         />
