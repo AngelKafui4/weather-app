@@ -3,16 +3,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const WeatherForecast = ({ forecast }) => {
   const today = new Date();
-  const tomorrow = new Date(today.getTime() + 24 * 60 * 60 * 1000);
 
   return (
     <div className="container my-5">
       <h2 className="text-center text-white fw-bold mb-4">5-Day Forecast</h2>
-      {forecast.slice(8, 41).reduce((result, item, index) => {
+      {forecast.slice(1).reduce((result, item, index) => {
         const dayIndex = Math.floor(index / 8);
+        const dayDate = new Date(item.dt_txt).toISOString().slice(0, 10);
         if (!result[dayIndex]) {
           result[dayIndex] = {
-            dt_txt: new Date(item.dt_txt).toISOString().slice(0, 10),
+            dt_txt: dayDate,
             data: [],
           };
         }
