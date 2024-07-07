@@ -1,20 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import WeatherApp from './WeatherApp';
+//import LoginForm from './Login';
+//import UserRegistration from './UserRegistration';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
 const App = () => {
+  //const [isLoggedIn, setIsLoggedIn] = useState(false);
+  //const [isRegistered, setIsRegistered] = useState(false);
+
+  //const handleLogin = () => {
+    //setIsLoggedIn(true);
+  //};
+
+  //const handleRegistration = () => {
+    //setIsRegistered(true);
+  //};
+
   return (
-    <div className="d-flex justify-content align-items-center" style={{minHeight: '100vh'}}>
-      <div className='container'>
+    <div className="d-flex justify-content align-items-center">
+      <div>
       <WeatherApp />
-      <footer className="app-footer">
-      <p>&copy; 2024 Weather App. All rights reserved.</p>
-    </footer>
-      </div> 
+      {/*
+        {!isLoggedIn && !isRegistered && (
+          <UserRegistration onRegister={handleRegistration} />
+        )}
+        {isLoggedIn && !isRegistered && (
+          <LoginForm onlogin={handleLogin} />
+        )}
+        {(isLoggedIn || isRegistered) && (
+          <WeatherApp />
+        )}
+      */}
+      </div>
     </div>
   );
-}
+};
 
 export default App;

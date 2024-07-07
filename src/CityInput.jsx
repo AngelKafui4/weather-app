@@ -89,8 +89,9 @@ const CityInput = ({ onSubmit, cityDatabase = [] }) => {
         value={city}
         onChange={handleInputChange}
         className="form-control"
+        placeholder="Enter a city"
       />
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn text-white" style={{ backgroundColor: '#CCA38A' }}>
         Get Weather
       </button>
       {suggestions.length > 0 && (
